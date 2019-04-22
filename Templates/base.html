@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+    <head>
+        <p><a href='/newpost'>New Post</a>|<a href='/blog'>Blogs</a></p>
+        
+        <title>{{Title}}</title>
+
+        {% with messages = get_flashed_messages() %}
+            <ul>
+                {% for message in messages %}
+                    <li>{{message}}</li>
+                {% endfor %}
+            </ul>
+        {% endwith %}
+    </head>
+<body>
+
+    {% block content %}
+    
+    {% endblock %}
+
+</body>
+</html>
